@@ -1,0 +1,37 @@
+<app-entry-page *ngIf="showEntryPage"></app-entry-page>
+<section class="page-wrapper" *ngIf="!showEntryPage">
+  <section class="container">
+    <div class="left">
+      <div class="text">
+        <h1 id="heading">Akhil Ramadugu</h1>
+      </div>
+      <nav class="navbar">
+        <button class="nav-button" (click)="toggle_about()">About</button>
+        <button class="nav-button" (click)="toggle_experience()">Experience</button>
+        <button class="nav-button" (click)="toggle_projects()">Projects</button>
+      </nav>
+    </div>
+    <footer class="social-media-footer">
+      <a href="https://www.linkedin.com/in/akhil-ramadugu-a97026169/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/akhilramadugu" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com/akhilramadugu" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.goodreads.com/user/show/akhilramadugu" target="_blank"><i class="fab fa-goodreads"></i></a>
+      <button class="chatbot-button"><i class="fas fa-robot"></i></button>
+    </footer>
+  </section>
+  <section class="right_container" *ngIf="about_visibility">
+    <div>
+      <app-about></app-about>
+    </div>
+  </section>
+  <section class="right_container" *ngIf="experience_visibility">
+    <div>
+      <app-experience></app-experience>
+    </div>
+  </section>
+  <section class="right_container" *ngIf="projects_visibility">
+    <div>
+      <app-projects></app-projects>
+    </div>
+  </section>
+</section>
